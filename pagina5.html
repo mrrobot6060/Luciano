@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aprenda Programação - Resumo da Estrutura HTML</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            font-size: 18px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            overflow-x: auto;
+            text-align: left;
+        }
+
+        #next-button {
+            display: block;
+            margin: 50px auto;
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resumo da Estrutura HTML</h1>
+    <p>O HTML (HyperText Markup Language) é a linguagem de marcação usada para estruturar o conteúdo de uma página da web. Aqui está um exemplo básico de estrutura HTML:</p>
+
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Título da Página&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Título Principal&lt;/h1&gt;
+            &lt;p&gt;Parágrafo de exemplo.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+
+    <p>No exemplo acima, temos a estrutura básica do documento HTML. Aqui estão alguns conceitos importantes:</p>
+
+    <h2>&lt;!DOCTYPE html&gt;</h2>
+    <p>A declaração &lt;!DOCTYPE html&gt; define o tipo de documento como HTML5.</p>
+
+    <h2>&lt;html&gt;</h2>
+    <p>A tag &lt;html&gt; é o elemento raiz de um documento HTML e contém todos os outros elementos.</p>
+
+    <h2>&lt;head&gt;</h2>
+    <p>A tag &lt;head&gt; contém informações sobre o documento, como o título da página, metadados e links para arquivos externos.</p>
+
+    <h2>&lt;title&gt;</h2>
+    <p>A tag &lt;title&gt; define o título da página, que é exibido na barra de título do navegador.</p>
+
+    <h2>&lt;body&gt;</h2>
+    <p>A tag &lt;body&gt; contém todo o conteúdo visível da página, como texto, imagens, links e elementos estruturais.</p>
+
+    <h2>&lt;h1&gt;, &lt;p&gt; e outros elementos</h2>
+    <p>Os elementos HTML, como &lt;h1&gt; (cabeçalho),
+            &lt;p&gt;Os elementos HTML, como &lt;h1&gt; (cabeçalho), &lt;p&gt; (parágrafo) e muitos outros, são usados para estruturar e formatar o conteúdo da página. Aqui estão alguns exemplos:</p>
+
+        <h2>&lt;a&gt;</h2>
+        <p>O elemento &lt;a&gt; é usado para criar links. Por exemplo:</p>
+        <pre>
+            &lt;a href="https://www.exemplo.com"&gt;Link Exemplo&lt;/a&gt;
+        </pre>
+
+        <h2>&lt;img&gt;</h2>
+        <p>O elemento &lt;img&gt; é usado para exibir imagens na página. Por exemplo:</p>
+        <pre>
+            &lt;img src="imagem.jpg" alt="Descrição da imagem"&gt;
+        </pre>
+
+        <h2>&lt;ul&gt; e &lt;li&gt;</h2>
+        <p>Os elementos &lt;ul&gt; e &lt;li&gt; são usados para criar listas não ordenadas. Por exemplo:</p>
+        <pre>
+            &lt;ul&gt;
+                &lt;li&gt;Item 1&lt;/li&gt;
+                &lt;li&gt;Item 2&lt;/li&gt;
+                &lt;li&gt;Item 3&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+
+        <h2>&lt;table&gt;, &lt;tr&gt; e &lt;td&gt;</h2>
+        <p>Os elementos &lt;table&gt;, &lt;tr&gt; e &lt;td&gt; são usados para criar tabelas. Por exemplo:</p>
+        <pre>
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Dado 1&lt;/td&gt;
+                    &lt;td&gt;Dado 2&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Dado 3&lt;/td&gt;
+                    &lt;td&gt;Dado 4&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        </pre>
+
+        <h2>&lt;form&gt; e &lt;input&gt;</h2>
+        <p>Os elementos &lt;form&gt; e &lt;input&gt; são usados para criar formulários interativos. Por exemplo:</p>
+        <pre>
+            &lt;form action="processar.php" method="post"&gt;
+                &lt;input type="text" name="nome" placeholder="Digite seu nome"&gt;
+                &lt;input type="submit" value="Enviar"&gt;
+            &lt;/form&gt;
+        </pre>
+
+        <h2>&lt;div&gt; e &lt;span&gt;</h2>
+        <p>Os elementos &lt;div&gt; e &lt;span&gt; são usados para agrupar e estilizar outros elementos. Por exemplo:</p>
+        <pre>
+            &lt;div class="container"&gt;
+                &lt;h2&gt;Título do Contêiner&lt;/h2&gt;
+                &lt;p&gt;Texto de exemplo&lt;/p&gt;
+            &lt;/div&gt;
+        </pre>
+                <h2>&lt;div&gt; e &lt;span&gt;</h2>
+        <p>Os elementos &lt;div&gt; e &lt;span&gt; são usados para agrupar e estilizar outros elementos. Por exemplo:</p>
+        <pre>
+            &lt;div class="container"&gt;
+                &lt;h2&gt;Título do Contêiner&lt;/h2&gt;
+                &lt;p&gt;Texto de exemplo&lt;/p&gt;
+            &lt;/div&gt;
+        </pre>
+
+        <p>Esses são apenas alguns exemplos de elementos HTML. Existem muitos outros que você pode explorar para criar páginas da web ricas em conteúdo e interatividade.</p>
+
+        <p>Continue praticando e explorando os recursos do HTML para aprimorar suas habilidades de programação web!</p>
+
+        <a id="next-button" href="pagina6.html">Próxima Página</a>
+    </body>
+</html>
+
+        

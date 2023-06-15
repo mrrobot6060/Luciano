@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página 10 - Python Tutorial</title>
+    <style>
+        body {
+            background-color: color;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .code-container {
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .code-container pre {
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            overflow-x: auto;
+        }
+        .copy-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            padding: 5px;
+            background-color: #333;
+            color: white;
+            font-size: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .copy-button:hover {
+            background-color: #555;
+        }
+         #next-button {
+            display: block;
+            margin: 50px auto;
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function copyToClipboard(elementId) {
+            var element = document.getElementById(elementId);
+            var range = document.createRange();
+            range.selectNodeContents(element);
+            var selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            document.execCommand("copy");
+            selection.removeAllRanges();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Exemplos de Projetos em Python para Iniciantes</h1>
+        <h2>Projeto 1 - Calculadora</h2>
+        <p>Crie uma calculadora simples que permita ao usuário realizar operações matemáticas básicas. Veja o código abaixo:</p>
+        <div class="code-container">
+            <pre id="code1">
+def adicionar(a, b):
+    return a + b
+
+def subtrair(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    return a / b
+
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+
+print("Soma:", adicionar(num1, num2))
+print("Subtração:", subtrair(num1, num2))
+print("Multiplicação:", multiplicar(num1, num2))
+print("Divisão:", dividir(num1, num2))
+            </pre>
+            <div class="copy-button" onclick="copyToClipboard('code1')">Copiar</div>
+        </div>
+
+                <h2>Projeto 2 - Jogo de Adivinhação</h2>
+        <p>Crie um jogo de adivinhação em que o programa escolhe um número aleatório e o jogador tenta adivinhar qual é. Veja o código abaixo:</p>
+        <div class="code-container">
+            <pre id="code2">
+import random
+
+def jogo_adivinhacao():
+    numero_secreto = random.randint(1, 100)
+    tentativas = 0
+
+    print("Bem-vindo ao Jogo de Adivinhação!")
+    print("Tente adivinhar o número secreto entre 1 e 100.")
+
+    while True:
+        tentativa = int(input("Digite um número: "))
+        tentativas += 1
+
+        if tentativa == numero_secreto:
+            print("Parabéns! Você acertou o número em", tentativas, "tentativas.")
+            break
+        elif tentativa < numero_secreto:
+            print("Tente um número maior.")
+        else:
+            print("Tente um número menor.")
+
+jogo_adivinhacao()
+            </pre>
+            <div class="copy-button" onclick="copyToClipboard('code2')">Copiar</div>
+        </div>
+
+        <h2>Projeto 3 - Lista de Tarefas</h2>
+        <p>Crie um programa que permita ao usuário gerenciar uma lista de tarefas. O programa deve permitir adicionar, exibir e remover tarefas da lista. Veja o código abaixo:</p>
+        <div class="code-container">
+            <pre id="code3">
+lista_tarefas = []
+
+def adicionar_tarefa():
+    tarefa = input("Digite a tarefa: ")
+    lista_tarefas.append(tarefa)
+    print("Tarefa adicionada com sucesso.")
+
+def exibir_tarefas():
+    print("Lista de Tarefas:")
+    for index, tarefa in enumerate(lista_tarefas):
+        print(f"{index + 1}. {tarefa}")
+
+def remover_tarefa():
+    exibir_tarefas()
+    numero_tarefa = int(input("Digite o número da tarefa a ser removida: "))
+    if 1 <= numero_tarefa <= len(lista_tarefas):
+        tarefa_removida = lista_tarefas.pop(numero_tarefa - 1)
+        print("Tarefa removida:", tarefa_removida)
+    else:
+        print("Número de tarefa inválido.")
+
+while True:
+    print("===== MENU =====")
+    print("1. Adicionar Tarefa")
+    print("2. Exibir Tarefas")
+    print("3. Remover Tarefa")
+    print("0. Sair")
+
+    opcao = int(input("Escolha uma opção: "))
+
+    if opcao == 1:
+        adicionar_tarefa()
+    elif opcao == 2:
+        exibir_tarefas()
+    elif opcao == 3:
+        remover_tarefa()
+    elif opcao == 0:
+        break
+    else:
+        print("Opção inválida. Tente novamente.")
+            </pre>
+            <div class="copy-button" onclick="copyToClipboard('code3')">Copiar</div>
+        </div>
+    </div>
+    <a id="next-button" href="pagina11.html">Próximo</a>
+</body>
+</html>
